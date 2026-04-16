@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS BIT | Impulso Digital - Agencia de Crecimiento Digital en Paraguay</title>
+    <meta name="description" content="AS BIT - Convertimos tu negocio en una máquina de crecimiento digital. Diseño web, SEO local, automatización y chatbots para PYMEs en Paraguay.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary-dark: #0a0f1c;
+            --secondary-dark: #111827;
+            --accent-blue: #1847F0;
+            --accent-cyan: #00C8FF;
+            --accent-green: #10b981;
+            --text-white: #ffffff;
+            --text-gray: #9ca3af;
+            --text-light: #e5e7eb;
+            --border-color: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 5%;
+            background: rgba(10, 15, 28, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        .nav-links a:hover { color: var(--text-white); }
+        .nav-cta {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+        .mobile-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-white);
+            transition: 0.3s;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 5% 4rem;
+            position: relative;
+            overflow: hidden;
+            background: var(--primary-dark);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 70% 50%, rgba(24, 71, 240, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 30% 80%, rgba(0, 200, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(24, 71, 240, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(24, 71, 240, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(24, 71, 240, 0.1);
+            border: 1px solid rgba(24, 71, 240, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover {
+            background: var(--secondary-dark);
+            border-color: var(--accent-blue);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+        .about {
+            padding: 6rem 5%;
+            background: var(--secondary-dark);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+        }
+        .about-logo-large {
+            width: 100%;
+            max-width: 350px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(24, 71, 240, 0.3);
+        }
+        .about-logo-large::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+        }
+        .about-logo-text {
+            width: 300px;
+            height: auto;
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+        }
+        .about-logo-sub {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+        .about-badge {
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            background: var(--primary-dark);
+            border: 2px solid var(--accent-cyan);
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+        }
+        .about-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+        .about-content h2 span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .about-role {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-text {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .about-specialties {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .specialty-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--primary-dark);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .specialty-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+        }
+        .specialty-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .about-diff {
+            background: var(--primary-dark);
+            border-left: 4px solid var(--accent-blue);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin-top: 1.5rem;
+        }
+        .about-diff p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .about-diff strong {
+            color: var(--accent-cyan);
+        }
+        .services {
+            padding: 6rem 5%;
+            background: var(--primary-dark);
+        }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        .section-tag {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(24, 71, 240, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+        }
+        .service-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .process {
+            padding: 6rem 5%;
+            background: var(--secondary-dark);
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            box-shadow: 0 10px 30px rgba(24, 71, 240, 0.3);
+        }
+        .step-badge {
+            display: inline-block;
+            background: rgba(24, 71, 240, 0.1);
+            color: var(--accent-cyan);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+        }
+        .process-step h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+        .process-step p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        .benefits {
+            padding: 6rem 5%;
+            background: var(--primary-dark);
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+        }
+        .benefit-icon {
+            color: var(--accent-green);
+            flex-shrink: 0;
+        }
+        .benefit-text h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .benefit-text p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        .seo-section {
+            padding: 6rem 5%;
+            background: var(--secondary-dark);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .seo-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+        .seo-content h2 span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .seo-content p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .seo-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .seo-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+        .seo-visual {
+            background: linear-gradient(135deg, rgba(24, 71, 240, 0.1), rgba(0, 200, 255, 0.1));
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .map-preview {
+            width: 100%;
+            max-width: 400px;
+            background: var(--primary-dark);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        .map-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .map-item:last-child {
+            border-bottom: none;
+        }
+        .map-rank {
+            width: 30px;
+            height: 30px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .map-info h4 {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+        .map-info p {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+        .automation {
+            padding: 6rem 5%;
+            background: var(--primary-dark);
+        }
+        .automation-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .chat-preview {
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 400px;
+        }
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+        }
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .message {
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            max-width: 80%;
+            font-size: 0.9rem;
+        }
+        .message.bot {
+            background: var(--primary-dark);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        .message.user {
+            background: var(--accent-blue);
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+        .typing {
+            display: flex;
+            gap: 4px;
+            padding: 0.75rem 1rem;
+        }
+        .typing span {
+            width: 8px;
+            height: 8px;
+            background: var(--text-gray);
+            border-radius: 50%;
+            animation: typing 1.4s infinite;
+        }
+        .typing span:nth-child(2) { animation-delay: 0.2s; }
+        .typing span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+        .portfolio {
+            padding: 6rem 5%;
+            background: var(--secondary-dark);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .portfolio-item {
+            background: var(--primary-dark);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        .portfolio-img {
+            height: 200px;
+            background: linear-gradient(135deg, rgba(24, 71, 240, 0.2), rgba(0, 200, 255, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-gray);
+        }
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+        .portfolio-info h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+        .portfolio-info p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        .portfolio-tag {
+            display: inline-block;
+            background: rgba(24, 71, 240, 0.1);
+            color: var(--accent-blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        .pricing {
+            padding: 6rem 5%;
+            background: var(--primary-dark);
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .price-card {
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+        .price-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 64px rgba(24, 71, 240, 0.15);
+        }
+        .price-card.featured {
+            background: linear-gradient(135deg, var(--accent-blue), rgba(0, 200, 255, 0.8));
+            border: none;
+            transform: scale(1.05);
+        }
+        .price-card.featured:hover {
+            transform: scale(1.05) translateY(-6px);
+        }
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-green);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+        }
+        .price-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.5rem;
+        }
+        .price-card.featured .price-name {
+            color: white;
+        }
+        .price-tagline {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+        .price-card.featured .price-tagline {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .price-amount {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .price-card.featured .price-amount {
+            color: white;
+        }
+        .price-note {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+        }
+        .price-card.featured .price-note {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .price-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .price-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .price-card.featured .price-features li {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .price-features li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+        .price-card.featured .price-features li::before {
+            color: white;
+        }
+        .price-cta {
+            display: block;
+            text-align: center;
+            background: rgba(24, 71, 240, 0.1);
+            color: var(--accent-blue);
+            padding: 1rem;
+            border-radius: 12px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: 1.5px solid transparent;
+        }
+        .price-cta:hover {
+            background: var(--accent-blue);
+            color: white;
+        }
+        .price-card.featured .price-cta {
+            background: white;
+            color: var(--accent-blue);
+        }
+        .price-card.featured .price-cta:hover {
+            opacity: 0.9;
+        }
+        .payment-methods {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: var(--secondary-dark);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .payment-methods h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        .payment-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .payment-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-dark);
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+        .payment-item span {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .cta-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, var(--secondary-dark), var(--primary-dark));
+            text-align: center;
+        }
+        .cta-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(24, 71, 240, 0.05);
+            border: 1px solid rgba(24, 71, 240, 0.2);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+        }
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+        .cta-section h2 span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-section p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .contact {
+            padding: 6rem 5%;
+            background: var(--secondary-dark);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .contact-card {
+            background: var(--primary-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .contact-card:hover {
+            border-color: var(--accent-green);
+            transform: translateY(-5px);
+        }
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(37, 211, 102, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: #25D366;
+        }
+        .contact-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+        .contact-card p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        .contact-highlight {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        footer {
+            background: var(--primary-dark);
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .footer-logo span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        footer p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+            text-decoration: none;
+            animation: wapulse 2.5s ease-in-out infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        @keyframes wapulse {
+            0%, 100% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45); }
+            50% { box-shadow: 0 8px 52px rgba(37, 211, 102, 0.7); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu { display: flex; }
+            .hero { padding: 6rem 5% 3rem; }
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .about-grid,
+            .seo-section,
+            .automation-content {
+                grid-template-columns: 1fr;
+            }
+            .about-logo-large {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            .about-specialties {
+                grid-template-columns: 1fr;
+            }
+            .price-card.featured {
+                transform: scale(1);
+            }
+            .price-card.featured:hover {
+                transform: translateY(-6px);
+            }
+            .whatsapp-float {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <img src="logo.jpg.jpeg" alt="AS BIT" class="logo-img">
+            AS <span style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">BIT</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/595983286841?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20sobre%20mi%20negocio" class="nav-cta" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp
+        </a>
+        <div class="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                Especialista en crecimiento digital · Paraguay
+            </div>
+            <h1>Convierte tu negocio en una <span>máquina de crecimiento digital</span></h1>
+            <p class="hero-subtitle">Diseñamos sistemas digitales que atraen clientes, automatizan procesos y multiplican tus ventas. No solo creamos páginas web, construimos motores de negocio  en Paraguay.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/595983286841?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20sobre%20mi%20negocio" class="btn-primary" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    Consulta gratuita
+                </a>
+                <a href="#sobre-mi" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    Conóceme
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">+150%</span>
+                    <span class="stat-label">Más visibilidad promedio</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Generando oportunidades</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Adaptado a celulares</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="sobre-mi">
+        <div class="about-grid">
+            <div class="about-image">
+                <div class="about-logo-large">
+                    <img src="logo.jpg.jpeg" alt="AS BIT" class="about-logo-text">
+                    <div class="about-logo-sub">Impulso Digital</div>
+                </div>
+                <div class="about-badge">Tu Aliado Digital</div>
+            </div>
+            <div class="about-content">
+                <div class="section-tag">Sobre Mí</div>
+                <h2>Hola, soy Arturo santander,<span>diseño webs y ayudo al crecimiento digital de tu negocio</span></h2>
+                <div class="about-role">Diseñador Web & Estratega Digital · Paraguay</div>
+                <p class="about-text">
+                    No solo diseño páginas bonitas. <strong>Creo herramientas de venta</strong> que convierten visitantes curiosos en clientes que pagan. Trabajo con negocios locales en Paraguay que quieren crecer de verdad, no solo "tener una web".
+                </p>
+                <p class="about-text">
+                    Mi enfoque es simple: <strong>resultados medibles</strong>. Cada proyecto que desarrollo está diseñado para generar retorno de inversión. Desde hoteles y restaurantes hasta tiendas y servicios profesionales, he ayudado a decenas de negocios a multiplicar su presencia online y sus ventas.
+                </p>
+                <p class="about-text">
+                    Entiendo el mercado local de Paraguay. No aplico fórmulas genéricas — diseño soluciones específicas para tu tipo de negocio y tu cliente ideal. Tu éxito es mi éxito.
+                </p>
+
+                <div class="about-specialties">
+                    <div class="specialty-item">
+                        <div class="specialty-dot"></div>
+                        <span class="specialty-text">Hoteles y hospedajes</span>
+                    </div>
+                    <div class="specialty-item">
+                        <div class="specialty-dot"></div>
+                        <span class="specialty-text">Tiendas y comercios</span>
+                    </div>
+                    <div class="specialty-item">
+                        <div class="specialty-dot"></div>
+                        <span class="specialty-text">Servicios profesionales</span>
+                    </div>
+                    <div class="specialty-item">
+                        <div class="specialty-dot"></div>
+                        <span class="specialty-text">Negocios locales PyMEs</span>
+                    </div>
+                </div>
+
+                <div class="about-diff">
+                    <p><strong>Mi diferencia:</strong> Combino diseño web profesional con estrategia de negocio, automatización de procesos y gestión digital. No te dejo solo después de entregar la web — te acompaño en el crecimiento continuo de tu negocio.</p>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="https://wa.me/595983286841?text=Hola!%20Quiero%20hablar%20sobre%20mi%20negocio" target="_blank" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Hablemos de tu negocio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicios">
+        <div class="section-header">
+            <p class="section-tag">Nuestros Servicios</p>
+            <h2 class="section-title">Soluciones diseñadas para hacer crecer tu negocio</h2>
+            <p class="section-subtitle">Cada servicio está enfocado en un objetivo: más clientes, menos trabajo manual y mayor visibilidad.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <h3>Diseño y Desarrollo Web</h3>
+                <p>Páginas web que venden. Diseños modernos, rápidos y optimizados para convertir visitantes en clientes. Incluye hosting, dominio y soporte,aveces lo simple  es mejor.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <h3>SEO Local & Google Maps</h3>
+                <p>Aparece en los primeros resultados cuando clientes locales te buscan. Optimización completa de tu ficha de Google Business.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </div>
+                <h3>Gestión de Redes Sociales</h3>
+                <p>Estrategia de contenido, publicación constante y community management. Construimos tu presencia digital profesional.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h3>Chatbots Inteligentes</h3>
+                <p>Atención al cliente automática 24/7. Responde preguntas frecuentes, agenda citas y captura leads mientras dormís.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <h3>Automatización de Procesos</h3>
+                <p>Flujos de trabajo automatizados para mensajes, emails, recordatorios y seguimiento de clientes. Ahorra horas cada día.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+                <h3>Gestión de Negocios</h3>
+                <p>Asesoría en optimización de procesos comerciales, flujos de venta y estrategias digitales para maximizar tu rentabilidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process" id="proceso">
+        <div class="section-header">
+            <p class="section-tag">Mi Forma de Trabajar</p>
+            <h2 class="section-title">Proceso simple, resultados medibles</h2>
+            <p class="section-subtitle">Yo me encargo de todo lo técnico. Vos te enfocás en tu negocio.</p>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-badge">GRATIS</div>
+                <h3>Conversamos</h3>
+                <p>Hablamos sobre tu negocio, objetivos y qué necesitás. Sin costo, sin compromiso. Analizo tu situación actual y oportunidades.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-badge">SIN SORPRESAS</div>
+                <h3>Propuesta Personalizada</h3>
+                <p>Te envío una propuesta detallada con precio, plazo, formas de pago y todo lo que incluye. Transparencia total desde el inicio.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-badge">VOS RELAJADO</div>
+                <h3>Diseño & Desarrollo</h3>
+                <p>Yo me encargo de todo lo técnico. Vos solo revisás y lo cambio a tu gusto. Revisiones ilimitadas hasta que quede perfecto.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-badge">A VENDER</div>
+                <h3>Entrega & Crecimiento</h3>
+                <p>Tu web está online y tu negocio empieza a recibir más clientes. Soporte post-entrega y acompañamiento continuo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="section-header">
+            <p class="section-tag">Por qué trabajar conmigo</p>
+            <h2 class="section-title">Resultados reales, no promesas vacías</h2>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                </div>
+                <div class="benefit-text">
+                    <h4>Enfoque en ROI</h4>
+                    <p>Todo lo que construyo está diseñado para generar retorno de inversión, no solo verse bien.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div class="benefit-text">
+                    <h4>Entrega Rápida</h4>
+                    <p>Resultados en semanas, no meses. Metodología ágil para que empieces a ver beneficios pronto.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                </div>
+                <div class="benefit-text">
+                    <h4>Soporte Continuo</h4>
+                    <p>No te dejo solo. Acompañamiento constante y ajustes según los resultados obtenidos.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="benefit-text">
+                    <h4>Tecnología Confiable</h4>
+                    <p>Usamos herramientas probadas y escalables. Tu negocio está en buenas manos técnicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seo-section">
+        <div class="seo-content">
+            <p class="section-tag">Visibilidad Local</p>
+            <h2>Domina las búsquedas locales y <span>Google Maps</span></h2>
+            <p>Cuando alguien busca servicios como los tuyos cerca de su ubicación, tu negocio debe aparecer primero. Optimizamos tu presencia local para captar clientes que están listos para comprar.</p>
+            <ul class="seo-features">
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Optimización completa de Google Business Profile
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Estrategia de reseñas y reputación online
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Posicionamiento en "maps pack" (top 3 resultados)
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Citas locales y backlinks estratégicos
+                </li>
+            </ul>
+            <a href="https://wa.me/595983286841?text=Hola!%20Quiero%20mejorar%20mi%20posición%20en%20Google%20Maps" class="btn-primary" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Mejorar mi posición en Maps
+            </a>
+        </div>
+        <div class="seo-visual">
+            <div class="map-preview">
+                <div class="map-item">
+                    <div class="map-rank">1</div>
+                    <div class="map-info">
+                        <h4>Tu Negocio Optimizado</h4>
+                        <p>⭐ 4.9 (127 reseñas) · Abierto ahora</p>
+                    </div>
+                </div>
+                <div class="map-item">
+                    <div class="map-rank" style="background: var(--text-gray);">2</div>
+                    <div class="map-info">
+                        <h4>Competidor A</h4>
+                        <p>⭐ 4.2 (45 reseñas)</p>
+                    </div>
+                </div>
+                <div class="map-item">
+                    <div class="map-rank" style="background: var(--text-gray);">3</div>
+                    <div class="map-info">
+                        <h4>Competidor B</h4>
+                        <p>⭐ 3.8 (23 reseñas)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="automation">
+        <div class="automation-content">
+            <div class="chat-preview">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.9rem;">Asistente Virtual AS BIT</h4>
+                        <p style="font-size: 0.75rem; color: var(--accent-green);">● En línea</p>
+                    </div>
+                </div>
+                <div class="chat-messages">
+                    <div class="message bot">
+                        ¡Hola! 👋 Soy el asistente de AS BIT. ¿En qué puedo ayudarte hoy?
+                    </div>
+                    <div class="message user">
+                        Quiero información sobre sus servicios
+                    </div>
+                    <div class="message bot">
+                        Claro, te envío nuestro catálogo de servicios digitales. ¿Prefieres WhatsApp o email?
+                    </div>
+                    <div class="typing">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="section-tag">Automatización Inteligente</p>
+                <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 1rem;">Atiende clientes <span style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">mientras dormís</span></h2>
+                <p style="color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.7;">Los chatbots y flujos automatizados trabajan 24/7 captando leads, respondiendo preguntas y agendando citas. Tú te enfocas en atender, nosotros en traer clientes.</p>
+                <ul class="seo-features">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Respuestas instantáneas en WhatsApp y web
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Captura automática de datos de clientes
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Integración con CRM y herramientas de venta
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Ahorro de 10+ horas semanales en atención
+                    </li>
+                </ul>
+                <a href="https://wa.me/595983286841?text=Hola!%20Quiero%20automatizar%20mi%20negocio" class="btn-primary" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    Automatizar mi negocio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="section-header">
+            <p class="section-tag">Proyectos</p>
+            <h2 class="section-title">Resultados que hablan por sí solos</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Restaurante Local</h3>
+                    <p>Diseño web + Sistema de reservas + SEO local. Aumento  en reservas online.</p>
+                    <span class="portfolio-tag">Diseño Web</span>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Tienda de Ropa</h3>
+                    <p>E-commerce + Chatbot de ventas + Gestión de redes. ayuda mas en ventas digitales.</p>
+                    <span class="portfolio-tag">E-commerce</span>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 0 0 0 .3"></path><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path><circle cx="20" cy="10" r="2"></circle></svg>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Clínica Dental</h3>
+                    <p>Posicionamiento Google Maps + Automatización de citas. Top 3 en búsquedas locales.</p>
+                    <span class="portfolio-tag">SEO Local</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="precios">
+        <div class="section-header">
+            <p class="section-tag">Inversión Inteligente</p>
+            <h2 class="section-title">Una inversión que <span style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">se paga sola</span></h2>
+            <p class="section-subtitle">No es un gasto, es una inversión. Una web profesional genera retorno mes tras mes. Consulta personalizada según tus necesidades.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div class="price-name">Web Básica</div>
+                <div class="price-tagline">Ideal para empezar</div>
+                <div class="price-amount">Desde</div>
+                <div class="price-note">Precio a consultar · Personalizado</div>
+                <ul class="price-features">
+                    <li>Hasta 4 secciones</li>
+                    <li>Diseño profesional</li>
+                    <li>Adaptado a celulares</li>
+                    <li>WhatsApp integrado</li>
+                    <li>SEO básico</li>
+                    <li>1 mes de soporte incluido</li>
+                </ul>
+                <a href="https://wa.me/595983286841?text=Hola!%20Quiero%20info%20sobre%20la%20Web%20Básica" target="_blank" class="price-cta">Consultar precio →</a>
+            </div>
+            <div class="price-card featured">
+                <div class="featured-badge">⭐ MÁS POPULAR</div>
+                <div class="price-name">Web Profesional</div>
+                <div class="price-tagline">Para negocios en crecimiento</div>
+                <div class="price-amount">Desde</div>
+                <div class="price-note">Precio a consultar · Personalizado</div>
+                <ul class="price-features">
+                    <li>Hasta 8 secciones</li>
+                    <li>Diseño premium</li>
+                    <li>Animaciones incluidas</li>
+                    <li>Galería de fotos</li>
+                    <li>Formularios avanzados</li>
+                    <li>SEO optimizado</li>
+                    <li>3 meses de soporte incluido</li>
+                </ul>
+                <a href="https://wa.me/595983286841?text=Hola!%20Quiero%20info%20sobre%20la%20Web%20Profesional" target="_blank" class="price-cta">Consultar precio →</a>
+            </div>
+            <div class="price-card">
+                <div class="price-name">Tienda Online</div>
+                <div class="price-tagline">Vendé por internet</div>
+                <div class="price-amount">Desde</div>
+                <div class="price-note">Precio a consultar · Personalizado</div>
+                <ul class="price-features">
+                    <li>Catálogo de productos</li>
+                    <li>Carrito de compras</li>
+                    <li>Pasarela de pagos</li>
+                    <li>Gestión de inventario</li>
+                    <li>Panel de administración</li>
+                    <li>6 meses de soporte incluido</li>
+                </ul>
+                <a href="https://wa.me/595983286841?text=Hola!%20Quiero%20info%20sobre%20la%20Tienda%20Online" target="_blank" class="price-cta">Consultar precio →</a>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <h3>💳 Formas de Pago Disponibles</h3>
+            <div class="payment-grid">
+                <div class="payment-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                    <span>Tarjeta de crédito/débito</span>
+                </div>
+                <div class="payment-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    <span>Transferencia bancaria</span>
+                </div>
+                <div class="payment-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                    <span>Giros Tigo / Personal</span>
+                </div>
+                <div class="payment-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <span>Facilidades de pago</span>
+                </div>
+            </div>
+            <p style="margin-top: 1.5rem; color: var(--text-gray); font-size: 0.9rem;">
+                💡 <strong>50% de anticipo</strong> para iniciar el proyecto · <strong>50% al finalizar</strong> · También puedo adaptarme a una forma de pago que sea cómoda para ambas partes. Lo importante es que te sientas seguro y tranquilo con el proceso.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-box">
+            <div class="section-tag">El Momento es Ahora</div>
+            <h2>¿Listo para que tu negocio <span>aparezca en Google?</span></h2>
+            <p>Las empresas que aparecen en internet hoy son las que ganan mañana. Cada día que pasa son clientes que van a la competencia. No esperes más para impulsar tu negocio digitalmente.</p>
+            <a href="https://wa.me/595983286841?text=Hola!%20Vi%20tu%20web%20y%20quiero%20hacer%20una%20consulta%20gratis.%20¡Hagamos%20crecer%20mi%20negocio!" target="_blank" class="btn-primary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Escribime por WhatsApp
+            </a>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-gray);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Respuesta en menos de 1 hora · Consulta gratuita sin compromiso
+            </p>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <div class="section-header">
+            <p class="section-tag">Contacto</p>
+            <h2 class="section-title">Empecemos a <span style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">crecer juntos</span></h2>
+            <p class="section-subtitle">Estoy aquí para ayudarte a llevar tu negocio al siguiente nivel digital.</p>
+        </div>
+        <div class="contact-grid">
+            <a href="https://wa.me/595983286841?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20sobre%20mi%20negocio" class="contact-card" target="_blank">
+                <div class="contact-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </div>
+                <h3>WhatsApp</h3>
+                <p class="contact-highlight">0983 286841</p>
+                <p>Respuesta inmediata<br>disponibilidad todos los dias </p>
+            </a>
+            <a href="mailto:contacto@asbit.com.py" class="contact-card">
+                <div class="contact-icon" style="background: rgba(24, 71, 240, 0.1); color: var(--accent-blue);">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <h3>Email</h3>
+                <p class="contact-highlight">gomezarturosantander@gmail.com</p>
+                <p>Para propuestas detalladas<br>y consultas complejas</p>
+            </a>
+            <div class="contact-card">
+                <div class="contact-icon" style="background: rgba(0, 200, 255, 0.1); color: var(--accent-cyan);">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <h3>Agenda una llamada</h3>
+                <p class="contact-highlight">30 minutos gratuitos</p>
+                <p>Para conocer tu proyecto<br>y definir estrategia</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <div class="logo-img" style="width: 36px; height: 36px; font-size: 0.8rem;">AS</div>
+            AS <span>BIT</span>
+        </div>
+        <p>Impulso Digital © 2026. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">ayudamos a tu negocio a crecer </p>
+        <p style="margin-top: 1rem; font-size: 0.75rem; color: var(--text-gray);">
+            <a href="#sobre-mi" style="color: var(--text-gray); margin: 0 0.5rem;">Sobre Mí</a> ·
+            <a href="#servicios" style="color: var(--text-gray); margin: 0 0.5rem;">Servicios</a> ·
+            <a href="#proceso" style="color: var(--text-gray); margin: 0 0.5rem;">Proceso</a> ·
+            <a href="#precios" style="color: var(--text-gray); margin: 0 0.5rem;">Precios</a> ·
+            <a href="#contacto" style="color: var(--text-gray); margin: 0 0.5rem;">Contacto</a>
+        </p>
+    </footer>
+
+    <a href="https://wa.me/595983286841?text=Hola!%20Vi%20tu%20web%20y%20quiero%20consultar%20sobre%20mi%20negocio" class="whatsapp-float" target="_blank" title="Chatea por WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100%';
+                    navLinks.style.left = '0';
+                    navLinks.style.right = '0';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.background = 'var(--primary-dark)';
+                    navLinks.style.padding = '1rem';
+                    navLinks.style.borderBottom = '1px solid var(--border-color)';
+                });
+            }
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Fade in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.service-card, .process-step, .benefit-item, .portfolio-item, .price-card').forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
